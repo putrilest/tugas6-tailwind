@@ -1,8 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 import {BsFillCircleFill} from "react-icons/bs"
+import Products from "./Products"
+
+
 const Home = () => {
   return (
-    <main className="h-[565px] bg-zinc-200">
+    <main className=" bg-zinc-200 h-full">
       <div className="mx-36 flex pt-14 tablet:mx-12 mobile:mx-2 mobile:pt-4 mobile:block mobile:text-center">
         <div className="mobile:flex mobile:justify-center">
           <img className="rounded-full h-96 tablet:h-72 mobile:h-64 " src="https://static.wixstatic.com/media/c837a6_a5f904abc9224779abfc65cb53fa6ba7~mv2.jpg/v1/crop/x_158,y_151,w_1117,h_1117/fill/w_480,h_480,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/gettyimages-1284121212-2048x2048_edited_.jpg" alt="" />
@@ -25,6 +28,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Products/>
     </main>
   )
 }

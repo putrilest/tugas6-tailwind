@@ -1,46 +1,44 @@
-import {BsFillCircleFill} from "react-icons/bs"
+import {SiOpenproject, SiPolymerproject} from "react-icons/si"
+import {FaProjectDiagram} from "react-icons/fa"
 
 const Products = () => {
   const products = [
     {
       id: 1,
       judul: "Project 1 Infak PUB",
-      gambar: "produk1.jpeg",
-      deskripsi:"Website yang dibuat untuk bendehara eksternal pub dalam mengelola infak dari alumni sebagai pemasukan pub",
+      gambar: <SiOpenproject className="h-[60px] w-[100px] hover:text-red-400 tablet:h-[50px] tablet:w-[80px]  mobile:h-[40px] mobile:w-[70px]"/>,
+      deskripsi:"Website yang dibuat untuk bendehara eksternal pub dalam mengelola infak dari alumni sebagai pemasukan pub.",
       link: "https://github.com/putrilest/projek_infak.git",
     },
     {
       id: 2,
       judul: "Project 2 Sky Invest",
-      gambar: "produk2.jpeg",
+      gambar: <SiPolymerproject className="h-[60px] w-[100px] hover:text-orange-400 tablet:h-[50px] tablet:w-[80px]  mobile:h-[40px] mobile:w-[70px]"/>,
       deskripsi:"Website yang dikembangkan untuk menyediakan informasi reksadana investasi yang ada di Indonesia. ",
       link: "https://github.com/putrilest/PROJEKAN-WEB.git",
     },
     {
       id: 3,
       judul: "Project 3 Iphone Store",
-      gambar: "produk3.jpeg",
-      deskripsi:"website sotre yang menjual berbagai produk iphone",
+      gambar: <FaProjectDiagram className="h-[60px] w-[100px] hover:text-sky-400  tablet:h-[50px] tablet:w-[80px]  mobile:h-[40px] mobile:w-[70px]"/>,
+      deskripsi:"Websie Store yang menjual berbagai produk iphone seperti handphone, watch, dll.",
       link: "https://github.com/putrilest/uts-react.git",
     }
   ];
 
   return (
-    <div className="h-[565px] bg-zinc-200">
-      <div className=" mx-64 tablet:mx-24 mobile:mx-2">
-        <div className="flex">
-          <div className="font-bold text-4xl py-3 ">Project</div>
-          <div className="flex text-3xl tablet:text-3xl mobile:text-2xl mobile:justify-center pl-2 pt-2">
-            <div className="text-red-400 pt-3"><BsFillCircleFill/></div>
-            <div className="text-orange-300 pt-3 px-2"><BsFillCircleFill/></div>
-            <div className="text-sky-300 pt-3"><BsFillCircleFill/></div>
-          </div>
+    <div className="h-full py-4 bg-zinc-200">
+      <div className=" mx-64 tablet:mx-24 mobile:mx-6">
+        <div className="flex text-4xl tablet:text-3xl mobile:text-2xl font-bold mobile:justify-center">
+          <div className="font-sans py-3">Recent <span className="text-red-400 text-4xl tablet:text-3xl mobile:text-2xl">Project</span></div>
         </div>
 
-        <div className="grid gap-4 grid-rows-3 mobile:gap-1 mobile:grid-rows-1 tablet:gap-2 tablet:grid-rows-2"> 
+        <div className="flex flex-col gap-4 tablet:gap-3 mobile:gap-2"> 
         {products.map((product)=>(
-          <div key={product.id} className="flex bg-zinc-400 rounded-md p-8">
-            <a target="blank" href={product.link}><img className="h-[80px] w-[150px] hover:h-[90px] hover:w-[160px]" src={product.gambar} alt="" /></a>
+          <div key={product.id} className="flex bg-zinc-400 rounded-md p-6 tablet:p-4 mobile:p-2">
+            <a target="blank" href={product.link}>
+              {product.gambar}
+            </a>
             <div className="pl-4">
               <h1 className="text-xl font-bold tablet:text-base mobile:text-sm">{product.judul}</h1>
               <p className="tablet:text-sm mobile:text-xs">{product.deskripsi}</p>
